@@ -8,7 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import ErrorMessage from '@/app/components/ErrorMessage';
 import * as RadioGroup from '@radix-ui/react-radio-group';
-
+import styles from '@/app/components/Signup.module.css';
 
 const createUserSchema = z.object({
   emailOrPhone: z.string().min(1, 'Email or Phone Number is required'),
@@ -51,13 +51,13 @@ const Signup = () => {
       <form className='space-y-4' onSubmit={onSubmit}>
         <Flex direction="column" maxWidth="250px">
 
-          <div className='firstsection'>
+          <div className={styles.firstsection}>
             <div>
               <TextField.Root
                 variant="surface"
                 placeholder="Enter Your Mail ID / Phone No."
                 {...register('emailOrPhone')}
-                className='section'
+                className={styles.section}
               />
               {errors.emailOrPhone && <ErrorMessage>{errors.emailOrPhone.message}</ErrorMessage>}
             </div>
@@ -68,21 +68,21 @@ const Signup = () => {
                 type="password"
                 placeholder="Create a Password"
                 {...register('password')}
-                className='section'
+                className={styles.section}
               />
               {errors.password && <ErrorMessage>{errors.password.message}</ErrorMessage>}
             </div>
 
           </div>
 
-          <div className='firstsection'>
+          <div className={styles.firstsection}>
 
             <div>
               <TextField.Root
                 variant="surface"
                 placeholder="Enter a Profile Name"
                 {...register('profileName')}
-                className='section'
+                className={styles.section}
               />
               {errors.profileName && <ErrorMessage>{errors.profileName.message}</ErrorMessage>}
             </div>
@@ -92,7 +92,7 @@ const Signup = () => {
                 variant="surface"
                 placeholder="DD/MM/YYYY"
                 {...register('dob')}
-                className='section'
+                className={styles.section}
               />
               {errors.dob && <ErrorMessage>{errors.dob.message}</ErrorMessage>}
             </div>
@@ -132,9 +132,9 @@ const Signup = () => {
           </RadioGroup.Root>
 
 
-          <Button type="submit" disabled={isSubmitting} className='signup-button flex items-center space-x-2 cursor-pointer'>
+          <Button type="submit" disabled={isSubmitting}   className={`${styles.signupButton} flex items-center space-x-2 cursor-pointer`}>
             {isSubmitting}
-            <span>Create Account</span>
+            <span>Sign Up</span>
           </Button>
         </Flex>
       </form>

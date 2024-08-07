@@ -13,7 +13,7 @@ datasource db {
 
 model User {
   id           Int      @id @default(autoincrement())
-  emailOrPhone String   @db.VarChar(255)
+  emailOrPhone String   @db.VarChar(255) @unique
   password     String   @db.VarChar(255)
   profileName  String   @db.VarChar(255)
   dob          String   @db.VarChar(10)

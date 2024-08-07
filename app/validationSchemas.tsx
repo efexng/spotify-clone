@@ -15,3 +15,11 @@ export const createUserSchema = z.object({
   
   gender: z.enum(['MALE', 'FEMALE', 'OTHER']).optional(),  
 });
+
+
+
+
+export const loginSchema = z.object({
+  emailOrPhone: z.string().min(1, 'Email or Phone Number is required'),
+  password: z.string().min(6, 'Password must be at least 6 characters'),
+});

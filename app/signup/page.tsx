@@ -6,36 +6,38 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { FaDiscord } from "react-icons/fa";
 import SignupForm from './new/SignupForm'
+import styles from '../components/Signup.module.css'
 
 const Signup = () => {
   return (
-    <div className='container fixed'>
-      <div className='logo-container'>
-          <Link href='/'>
+    <div className={styles.container}>
+      <div className={styles.logoContainer}>
+        <Link href='/'>
           <Image src='/logos.png' alt='Logo' width={286} height={117} />
-          </Link>
+        </Link>
       </div>
 
-      <div className='content'>
-        <div className='button-group'>
+      <div className={styles.content}>
+        <div className={styles.buttonGroup}>
           <Link href='/signup/new'>
-            <Button className='facebook-button'> <FaFacebookF /> Continue with Facebook </Button>
+            <Button className={styles.facebookButton} > <FaFacebookF /> Continue with Facebook </Button>
           </Link>
           <Link href='/signup/new'>
-            <Button className='google-button'> <FcGoogle /> Continue with Google </Button>
+            <Button className={styles.googleButton} > <FcGoogle /> Continue with Google </Button>
           </Link>
           <Link href='/signup/new'>
-            <Button className='discord-button'> <FaDiscord /> Continue with Discord </Button>
+            <Button className={styles.discordButton} > <FaDiscord /> Continue with Discord </Button>
           </Link>
         </div>
 
-        <div className='separator'>
-          <div className='line top'></div>
-          <span>or</span>
-          <div className='line bottom'></div>
+        <div className={styles.separator}>
+          <div className={`${styles.line} ${styles.top}`}></div>
+          <span className={styles.orText}>or</span>
+          <div className={`${styles.line} ${styles.bottom}`}></div>
         </div>
 
-        <div className='signupform'>
+
+        <div className={styles.signupform}>
           <SignupForm />
         </div>
       </div>
