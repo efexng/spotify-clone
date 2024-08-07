@@ -1,9 +1,11 @@
 -- CreateTable
-CREATE TABLE `Issue` (
+CREATE TABLE `User` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `title` VARCHAR(255) NOT NULL,
-    `description` TEXT NOT NULL,
-    `status` ENUM('OPEN', 'IN_PROGRESS', 'CLOSED') NOT NULL DEFAULT 'OPEN',
+    `emailOrPhone` VARCHAR(255) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `profileName` VARCHAR(255) NOT NULL,
+    `dob` VARCHAR(10) NOT NULL,
+    `gender` ENUM('MALE', 'FEMALE', 'OTHER') NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
