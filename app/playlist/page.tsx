@@ -37,7 +37,7 @@ export default function Home() {
                     </div>
 
                     <div className={styles.Profile}>
-                        <Link href='/signup/new'>
+                    <Link href='/profile'>
                             <Button className={styles.ProfileButton}>My Profile</Button>
                         </Link>
                     </div>
