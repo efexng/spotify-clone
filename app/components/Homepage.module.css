@@ -1,0 +1,198 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    justify-content: space-between; /* Ensure spacing between elements */
+    align-items: center;
+    overflow: hidden; /* Prevent overflow and scrolling */
+    position: fixed; /* Fix the container's position */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px; /* Add padding to the sides */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.Logo, .SearchBar, .Profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo {
+    display: flex;
+    gap: 20px;
+}
+
+.SearchBar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for the search icon positioning */
+}
+
+.SearchBar input {
+    background-color: white;
+    border-radius: 40px;
+    border: 1px solid #ddd;
+    width: 400px; /* Max width for large screens */
+    height: 35px;
+    text-align: start;
+    padding-left: 50px; /* Add padding for the icon */
+    box-sizing: border-box;
+}
+
+.Profile {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.SearchBar ::placeholder {
+    color: rgba(0, 0, 0, 0.54) !important;
+    font-size: 15px; 
+    text-align: start;
+}
+
+.searchIcon {
+    position: relative;
+    left: 40px; 
+}
+
+.ProfileButton {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #212121;
+    border: none;
+    color: white;
+}
+
+.main {
+    background: linear-gradient(to bottom, #494949, #000); /* Gradient background */
+    padding: 20px; /* Padding around the grid */
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.sectionHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.sectionHeaderContainer p {
+    color: #BABABA;
+    margin-right: 20px;
+}
+
+.section {
+    margin-bottom: 40px; /* Space between sections */
+    margin-top: -15px;
+}
+
+.sectionHeader {
+    color: white;
+    font-size: 1.5rem; /* Larger font size for headers */
+    margin-bottom: 10px; /* Space below the header */
+    text-align: start; /* Center align the headers */
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 200px); /* Fixed width for 6 columns */
+    grid-auto-rows: 230px; /* Fixed height for rows */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: start; /* Align items to the start (top) */
+}
+
+.musicCard {
+    background-color: blue; /* Default background color for other cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+    text-align: start; /* Align text to the start */
+    padding: 10px; /* Padding inside the card */
+    width: 180px; /* Fixed width */
+    height: 245px; /* Fixed height */
+    display: flex; /* Flex to center content vertically */
+    flex-direction: column; /* Align children vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: flex-start; /* Align items to the start (top) */
+    overflow: hidden; /* Hide overflow to maintain card size */
+}
+
+.firstCard {
+    background-color: #767676; /* Specific background for the first card */
+}
+
+.otherCards {
+    background-color: #2F2F2F; /* Background color for other cards */
+}
+
+.imageContainer {
+    position: relative; /* Relative positioning for the play icon */
+    width: 100%; /* Full width for the image container */
+    height: 200px; /* Match the image height */
+}
+
+.musicCard img {
+    border-radius: 10px;
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    width: 100%; /* Full width for the image */
+    height: 100%; /* Full height for the image */
+}
+
+.playicon {
+    position: absolute; /* Absolute positioning for overlay */
+    bottom: 15px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+    border-radius: 20px; /* Round background */
+    z-index: 1; 
+    color: #000;
+    width: 34px;
+    height: 30px;
+    background-color: #1AB26B;
+}
+
+
+.musicTitle {
+    font-size: 10px; /* Title font size */
+    margin: 10px 0; /* Margin above and below title */
+    color: white;
+    text-align: start; /* Align title to the start */
+    width: 100%; /* Full width for title */
+}
+
+.musicDescription {
+    font-size: 10px; /* Title font size */
+    color: #fff; /* Description text color */
+    margin: 0; /* Remove margin for description */
+    width: 100%; /* Full width for description */
+}
+
+.playicon{
+    z-index: 1;
+}
+
+.Controller{
+    background-color: #171717;
+    width: 100%;
+    height: 60px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
