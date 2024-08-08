@@ -109,7 +109,7 @@ export default function Home() {
                                 <div key={index} className={`${styles.musicCard} ${index === 0 ? styles.firstCard : styles.otherCards}`}>
                                     <div className={styles.imageContainer}>
                                         <Image src={item.image} alt={item.title} width={200} height={200} />
-                                        {index === 0 && <IoIosPlay className={styles.playicon} />}                                    </div>
+                                        {index === 0 && <IoIosPlay className={styles.playicon} size='25' />}                                    </div>
                                     <h2 className={styles.musicTitle}>{item.title}</h2>
                                     <p className={styles.musicDescription}>{item.description}</p>
                                 </div>

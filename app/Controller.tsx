@@ -9,10 +9,10 @@ const Controller = () => {
    const currentPath = usePathname();
 
     const links = [
-        {label: 'Currently Playing', href: '/'},
+        {label: 'Currently Playing', href: '/currrentlyplaying'},
         {label: 'Home', href: '/homepage'},
-        {label: 'Your Library', href: '/issues'},
-        {label: 'Create Playlist', href: '/issues'},
+        {label: 'Your Library', href: '/libary'},
+        {label: 'Create Playlist', href: '/playlist'},
   
     ]
   return (

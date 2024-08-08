@@ -1,0 +1,203 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    justify-content: space-between; /* Ensure spacing between elements */
+    align-items: center;
+    overflow: hidden; /* Prevent overflow and scrolling */
+    position: fixed; /* Fix the container's position */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px; /* Add padding to the sides */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.Logo, .SearchBar, .Profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo {
+    display: flex;
+    gap: 20px;
+}
+
+.SearchBar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for the search icon positioning */
+}
+
+.SearchBar input {
+    background-color: white;
+    border-radius: 40px;
+    border: 1px solid #ddd;
+    width: 400px; /* Max width for large screens */
+    height: 35px;
+    text-align: start;
+    padding-left: 50px; /* Add padding for the icon */
+    box-sizing: border-box;
+}
+
+.Profile {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.SearchBar ::placeholder {
+    color: rgba(0, 0, 0, 0.54) !important;
+    font-size: 15px; 
+    text-align: start;
+}
+
+.searchIcon {
+    position: relative;
+    left: 40px; 
+}
+
+.ProfileButton {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #212121;
+    border: none;
+    color: white;
+}
+
+.Controller{
+    background-color: #171717;
+    width: 100%;
+    height: 60px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.musicCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* This already sets the left-right alignment */
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box;
+    gap: 20px; /* Add some gap between the two sections */
+}
+
+.Music {
+    flex: 1; /* Allow the Music section to take up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MusicContoller {
+    flex: 1; /* Allow the MusicController section to take up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MusicItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Spacing between items */
+}
+
+.Status, .Title {
+    margin-top: 10px;
+    text-align: center; /* Ensure text alignment is centered */
+}
+
+.Status {
+    color: #1AB26B;
+    font-size: 30px;
+}
+
+.Title {
+    color: #fff;
+    font-size: 20px;
+}
+
+.Artist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start */
+    width: 100%; /* Ensure it spans full width */
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.UserIocn {
+    margin-right: 10px; /* Space between icon and artist name */
+}
+
+
+
+
+.MusicContoller .Image {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.CustomHR {
+    height: 5px; /* Adjust this value to increase the height */
+    background-color: #fff; /* Adjust this value for different colors */
+    border: none; /* Remove the default border */
+    border-radius: 50px;
+}
+
+
+
+.SoundWave {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 100px; /* Adjust based on your design */
+    width: 100%; /* Adjust based on your design */
+  }
+  
+  .Bar {
+    width: 4px; /* Width of each bar */
+    height: 40%; /* Default height of bars */
+    margin: 0 2px; /* Spacing between bars */
+    background-color: white; /* Color of bars */
+  }
+  
+  .Bar:nth-child(1) { height: 30%; }
+  .Bar:nth-child(2) { height: 50%; }
+  .Bar:nth-child(3) { height: 70%; }
+  .Bar:nth-child(4) { height: 90%; }
+  .Bar:nth-child(5) { height: 100%; }
+  .Bar:nth-child(6) { height: 90%; }
+  .Bar:nth-child(7) { height: 80%; }
+  .Bar:nth-child(8) { height: 60%; }
+  .Bar:nth-child(9) { height: 80%; }
+  .Bar:nth-child(10) { height: 90%; }
+  .Bar:nth-child(11) { height: 100%; }
+  .Bar:nth-child(12) { height: 90%; }
+  .Bar:nth-child(13) { height: 70%; }
+  .Bar:nth-child(14) { height: 50%; }
+  .Bar:nth-child(15) { height: 30%; }
+  
