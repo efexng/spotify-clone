@@ -1,72 +1,72 @@
-import Image from 'next/image'
-import styles from '../components/Homepage.module.css'
-import { Button, TextField } from '@radix-ui/themes'
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
+import Image from 'next/image';
+import styles from '../components/Homepage.module.css';
+import { Button, TextField } from '@radix-ui/themes';
+import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import { IoIosPlay } from "react-icons/io";
-import Link from 'next/link'
-import Controller from '../Controller'
-
+import Link from 'next/link';
+import Controller from '../Controller';
+import ProfileNameComponent from './new/page';  // Renamed import
 
 const music = [
     {
         image: '/music2.png',
         title: 'Today’s Top Hit',
-        description: 'This is the description for song 2.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music3.png',
         title: 'All Out 2010s',
-        description: 'This is the description for song 2.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music4.png',
         title: 'Chill Hits',
-        description: 'This is the description for song 3.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music5.png',
         title: 'Viva Latino',
-        description: 'This is the description for song 4.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music6.png',
         title: 'Rock Classics',
-        description: 'This is the description for song 5.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music7.png',
         title: 'All Out 80s',
-        description: 'This is the description for song 6.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music8.png',
         title: 'Coding Mode',
-        description: 'This is the description for song 7.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music9.png',
         title: 'Focus Flow',
-        description: 'This is the description for song 8.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music10.png',
         title: 'Instrumental Study',
-        description: 'This is the description for song 9.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music2.png',
         title: 'Viva Latino',
-        description: 'This is the description for song 10.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music3.png',
         title: 'Rock Classics',
-        description: 'This is the description for song 11.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     },
     {
         image: '/music4.png',
         title: 'All Out 2010s',
-        description: 'This is the description for song 12.'
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. .'
     }
 ];
 
@@ -80,7 +80,7 @@ export default function Home() {
                 <div className={styles.NavBar}>
                     <div className={styles.Logo}>
                         <Image src='/logos.png' alt='Logo' width={190} height={57} />
-                        <h1>HELLO, EFE</h1>
+                        <ProfileNameComponent />  {/* Updated component */}
                     </div>
 
                     <div className={styles.SearchBar}>
@@ -99,28 +99,22 @@ export default function Home() {
                 </div>
 
                 <div className={styles.main}>
-                <div className={styles.section}>
-  <div className={styles.sectionHeaderContainer}>
-    <h2 className={styles.sectionHeader}>Spotify Playlist</h2>
-    <p>SEE ALL</p>
-  </div>
-  <div className={styles.cardContainer}>
-    {notifyMusic.map((item, index) => (
-      <div
-        key={index}
-        className={`${styles.musicCard} ${
-          index === 0 ? styles.firstCard : styles.otherCards
-        }`}
-      >
-        <div className={styles.imageContainer}>
-          <Image src={item.image} alt={item.title} width={200} height={200} />
-          {index === 0 && <IoIosPlay className={styles.playicon} />}
-        </div>
-        <h2 className={styles.musicTitle}>{item.title}</h2>
-        <p className={styles.musicDescription}>{item.description}</p>
-      </div>
-    ))}
-  </div>
+                    <div className={styles.section}>
+                        <div className={styles.sectionHeaderContainer}>
+                            <h2 className={styles.sectionHeader}>Spotify Playlist</h2>
+                            <p>SEE ALL</p>
+                        </div>
+                        <div className={styles.cardContainer}>
+                            {notifyMusic.map((item, index) => (
+                                <div key={index} className={`${styles.musicCard} ${index === 0 ? styles.firstCard : styles.otherCards}`}>
+                                    <div className={styles.imageContainer}>
+                                        <Image src={item.image} alt={item.title} width={200} height={200} />
+                                        {index === 0 && <IoIosPlay className={styles.playicon} />}                                    </div>
+                                    <h2 className={styles.musicTitle}>{item.title}</h2>
+                                    <p className={styles.musicDescription}>{item.description}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     <div className={styles.section}>
@@ -144,5 +138,5 @@ export default function Home() {
                 </div>
             </div>
         </>
-    )
+    );
 }

@@ -147,7 +147,7 @@
 
 .musicCard img {
     border-radius: 10px;
-    object-fit: cover; /* Cover to maintain aspect ratio */
+    object-fit: contain; /* Cover to maintain aspect ratio */
     width: 100%; /* Full width for the image */
     height: 100%; /* Full height for the image */
 }
@@ -156,7 +156,7 @@
     position: absolute; /* Absolute positioning for overlay */
     bottom: 15px; /* Distance from the bottom */
     right: 10px; /* Distance from the right */
-    border-radius: 20px; /* Round background */
+    border-radius: 60px; /* Round background */
     z-index: 1; 
     color: #000;
     width: 34px;
@@ -167,7 +167,7 @@
 
 .musicTitle {
     font-size: 10px; /* Title font size */
-    margin: 10px 0; /* Margin above and below title */
+    margin: 5px 0; /* Margin above and below title */
     color: white;
     text-align: start; /* Align title to the start */
     width: 100%; /* Full width for title */
